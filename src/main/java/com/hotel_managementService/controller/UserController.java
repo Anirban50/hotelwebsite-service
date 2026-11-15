@@ -30,10 +30,7 @@ public class UserController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-  
     @PostMapping("/login")
-      
-    
     public ResponseEntity<String> loginUser(@RequestBody User loginRequest) {
         
         if (loginRequest.getEmail_id() == null || loginRequest.getPassword() == null) {
